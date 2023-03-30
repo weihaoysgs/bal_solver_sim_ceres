@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(BA)
+project(bal_solver_sim_ceres)
 
 set(CMAKE_BUILD_TYPE "Release")
 
@@ -12,6 +12,7 @@ find_package(Ceres REQUIRED)
 
 include_directories( ${CERES_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(bal_solver_sim_ceres)
 
 add_executable(bound_adjustment_ceres bound_adjustment_ceres.cpp)
 add_executable(BoundleAdjustmentByNode_accelebrate ba_main.cpp)

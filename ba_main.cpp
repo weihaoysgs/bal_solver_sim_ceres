@@ -38,7 +38,7 @@ class costfunction
 
 int main()
 {
-  string filename = "/home/weihao/bal_solver/dataset/problem-16-22106-pre.txt";
+  string filename = "../data/test1.txt";
   ifstream infile;
   int cn, pn, obn;
 

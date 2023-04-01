@@ -93,6 +93,7 @@ void Residual_node<T, N, N1, N2>::computeJacobiandResidual(
     Eigen::Matrix<double, N, 1> *jacobi_residual)
 {
   // clock_t t1=clock();
+  /// this problem, N=2, N1=9, N2=3;
   jet<N1 + N2> cameraJet[N1];
   jet<N1 + N2> pointJet[N2];
   for (int i = 0; i < N1; i++)
@@ -114,7 +115,9 @@ void Residual_node<T, N, N1, N2>::computeJacobiandResidual(
     (*jacobi_parameter_1).row(i) = residual[i].v.head(N1);
     (*jacobi_parameter_2).row(i) = residual[i].v.tail(N2);
   }
-  // std::cout << "popint jacobian: \n" << *jacobi_parameter_2;
+  // std::cout << "jacobi_parameter_1: \n" << *jacobi_parameter_1 << std::endl;
+  // std::cout << "jacobi_parameter_2: \n" << *jacobi_parameter_2 << std::endl;
+  // std::cout << "jacobi_residual: \n" << *jacobi_residual << std::endl;
   delete (residual);
   return;
   /******************end compute jacobi*************************/

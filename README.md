@@ -4,9 +4,11 @@ Implement the BA use levenberg-marquardt method. Different with Ceres, this proj
 ## achieve effect
 
 - before optimization
+
 ![](./images/before_optimize.png)
 
 - after optimization
+
 ![](./images/optimize.png)
 
 ## ceres automatic derivation
